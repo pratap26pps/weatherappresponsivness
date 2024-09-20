@@ -1,0 +1,157 @@
+.container{
+    position: relative;
+    height: 96vh;
+    width: 206vh;
+    background-color: deepskyblue;
+    border: 0.3rem solid black;
+    box-shadow: 12rem;
+}
+.app{
+    margin-left: 30rem;
+    margin-top: 2rem;
+    font-size: 42px;
+    color: aliceblue;
+}
+.fig{
+    height: 74px;
+    width: 80px;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+
+}
+.yourWeather{
+   
+    height: 1rem;
+    width: 6rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+}
+.yourWeather.Tab{
+ background-color: burlywood;
+}
+.searchWeather{
+   
+    height: 1rem;
+    width: 6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.searchWeather.Tab{
+     background-color: burlywood;
+}
+.grantLocation{
+    
+    width: 162px;
+    background-color: blueviolet;
+    padding: 2.4rem;
+    margin-left: 30rem;
+   scale: 0;
+}
+.grantLocation.active{
+    scale: 1;
+}
+.accessButton{
+    font-size: 2rem;
+    
+}
+.accessButton:hover{
+    background-color: aqua;
+}
+
+.flex2{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    
+}
+.flex3{
+    display: flex;
+   flex-direction: column;
+   margin-left: 13.2rem;
+}
+.showData{
+    height: 64vh;
+    width: 82vh;
+    background-color: aquamarine;
+    margin-left: 364px;
+    margin-top: -22rem;
+    border: 0.3rem solid greenyellow;
+    border-radius: 1rem;
+    scale: 0;
+   
+}
+.showData.active{
+   scale: 1;
+}
+
+.tempFig{
+    height: 12vh;
+    width: 12vh;
+}
+.humidityFig{
+    height: 12vh;
+    width: 12vh;
+}
+.cloudsFig{
+    height: 12vh;
+    width: 12vh;
+}
+.windFig{
+    height: 12vh;
+    width: 12vh;
+}
+ 
+.humidity{
+    height: 12vh;
+    width: 12vh;
+    margin-left: 3rem;
+    background-color: rgb(24, 215, 59);
+}
+.clouds{
+    height: 12vh;
+    width: 12vh;
+    margin-left: 5rem;
+    background-color: rgb(8, 49, 36);
+}
+.SpeedWind{
+    height: 12vh;
+    width: 12vh;
+    background-color: rgb(199, 25, 25);
+}
+ .loading
+ {
+    width: 234px;
+    height: 232px;
+    scale: 0;
+ }
+ .loading.active{
+    scale: 1;
+ }
+ .loader{
+    margin-top: -400px;
+    margin-left: 514px;
+ }
+.searchCity{
+    font-size: 27px;
+}
+.search{
+    margin-left: 28rem;
+    scale: 0;
+    margin-top: -200px;
+
+   
+}
+.search.active{
+  scale: 1;
+   
+}
+.hand{
+    width: 41px;
+    height: 41px;
+    margin-left: -3rem;
+    margin-top: 2rem;
+    padding: 2px;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="app">WEATHER APP</div>
+     <div class="flex">
+         <div class="yourWeather">your wheather</div>
+         <div class="searchWeather">search wheather</div>
+     </div>   
+      
+     <div class="grantLocation active">
+        <img class="fig" src="your-location.png" >
+        <h2>GRANT LOCATION ACCESS</h2>
+        <h5>allow acces to weather information</h5>
+        <div class="accessButton">grant access</div>
+     </div>
+
+     
+    
+
+ <div class="showData active">
+
+    <div class="flex3">
+      <span class="city"></span> 
+      <span class="desc"></span>
+       <video class="tempFig" src="hot.mp4"></video>
+      <span class="fetchTemp"></span>
+    </div>
+      
+<div class="flex2">
+     <div class="speedWind">
+        <img class="windFig" src="wind.png" >
+        <h3>WIND SPEED</h3>
+        <span class="windData"></span>
+     </div>
+
+     <div class="humidity">
+      <video class="humidityFig" src="humidity.mp4"></video>
+        <h3>HUMIDITY</h3>
+        <span class="humidityData"></span>
+     </div>
+
+     <div class="clouds">
+      <video class="cloudsFig" src="rain.mp4"></video>
+        <h3>CLOUDS</h3>
+        <span class="cloudData"></span>
+     </div>
+ </div>
+
+ </div>
+    
+    <div class="loader" >
+        <video class="loading" src="progress.mp4"> <p>please wait</p></video>
+       
+    </div>
+
+    <form class="search">
+        <input class="searchCity" placeholder="search city" type="search" name="searchWeather"  >
+        <img class="hand" src="image.png" alt="">
+    </form>
+
+    </div>
+  
+
+
+    <script src="index.js"></script>
+</body>
+</html>
