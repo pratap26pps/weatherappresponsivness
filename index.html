@@ -10,6 +10,9 @@
     
 
     <div class="container">
+   <video autoplay loop muted plays-inline class="background-clip" src="weather.mp4"
+   >  </video>
+
         <div class="app">WEATHER APP</div>
      <div class="flex">
          <div class="yourWeather">your wheather</div>
@@ -31,7 +34,8 @@
     <div class="flex3">
       <span class="city"></span> 
       <span class="desc"></span>
-       <video class="tempFig" src="hot.mp4"></video>
+    
+      <img class="tempFig" src="high-temperature.png" alt="">
       <span class="fetchTemp"></span>
     </div>
       
@@ -43,13 +47,14 @@
      </div>
 
      <div class="humidity">
-      <video class="humidityFig" src="humidity.mp4"></video>
+      <img class="humidityFig" src="humidity.png" alt="">
         <h3>HUMIDITY</h3>
         <span class="humidityData"></span>
      </div>
 
      <div class="clouds">
-      <video class="cloudsFig" src="rain.mp4"></video>
+      
+        <img class="cloudsFig" src="weather-app.png" alt="">
         <h3>CLOUDS</h3>
         <span class="cloudData"></span>
      </div>
@@ -57,10 +62,8 @@
 
  </div>
     
-    <div class="loader" >
-        <video class="loading" src="progress.mp4"> <p>please wait</p></video>
-       
-    </div>
+
+    <div class="loader loading"></div>
 
     <form class="search">
         <input class="searchCity" placeholder="search city" type="search" name="searchWeather"  >

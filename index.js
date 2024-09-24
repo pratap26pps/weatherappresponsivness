@@ -29,11 +29,13 @@ yourWeather.addEventListener('click',()=>{
  grantLocation.classList.remove("active");
  search.classList.remove("active");
  showData.classList.remove("active");
+ loading.classList.remove("active");
  getFromSessionStorage();
 });
 searchWeather.addEventListener('click',()=>{
   switchTab(searchWeather);
   grantLocation.classList.remove("active");
+  loading.classList.remove("active");
  });
 // hide and display result during clicked button
 
@@ -63,20 +65,26 @@ function getFromSessionStorage(){
     grantLocation.classList.add("active");
    }
    else {
-      const coordinates= json.parse(localCoordinates);
+      const coordinates= JSON.parse(localCoordinates);
       fetchShowData(coordinates);
    }
 }
  async function  fetchShowData(coordinates){
   const{lat,lon}=coordinates;
   // make grantLocation invisible
+ 
   grantLocation.classList.remove("active");
   // make loader visible
   loading.classList.add("active");
   // api call
  try{
+  
+  const apiKey = '3d1b83a8ae5b7326f321b71dd18f646c';
 
-  const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=lat&w=lon&appid=3d1b83a8ae5b7326f321b71dd18f646c'); 
+  const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`);
+        
+
+
   const data= await response.json();
   
   loading.classList.remove("active");
@@ -100,17 +108,21 @@ function getFromSessionStorage(){
   const windData=document.querySelector(".windData");
   const cloudData=document.querySelector(".cloudData");
   const humidityData=document.querySelector(".humidityData");
-  
+
+      // Convert Kelvin to Celsius
+     function kelvinToCelsius(kelvin) {
+      return (kelvin - 273.15).toFixed(2); // Convert and format to 2 decimal places
+  }
   //  fetch values from weather to element
     city.innerText=weatherinfo?.name;
     desc.innerText = weatherinfo?.[0]?.description;
-    fetchTemp.innerText=weatherinfo?.main?.temp;
-    windData.innerText=weatherinfo?.wind?.speed;
-   cloudData.innerText =weatherinfo?.clouds.all;
-   humidityData.innerText =weatherinfo?.main?.humidity;
-
-
+    fetchTemp.innerText=`${kelvinToCelsius(weatherinfo?.main?.temp)} °C`;
+    windData.innerText=`${kelvinToCelsius(weatherinfo?.wind?.speed)}m/s`;
+   cloudData.innerText =`${weatherinfo?.clouds.all}%`;
+   humidityData.innerText =`${weatherinfo?.main?.humidity}%`;
  }
+
+ 
 
 accessButton.addEventListener('click',getLocation);
 // get current lati and longi by this method
@@ -125,10 +137,12 @@ accessButton.addEventListener('click',getLocation);
       const userCoordinates={
        lat : position.coords.latitude,
        lon : position.coords.longitude,
+      
     }
-    sessionStorage.getItem("user-coordinates",JSON.stringify(userCoordinates));
+    sessionStorage.setItem("user-coordinates",JSON.stringify(userCoordinates));
     fetchShowData(userCoordinates);
   }
+ 
     // Call the function to get location
       getLocation();
 
@@ -153,8 +167,8 @@ accessButton.addEventListener('click',getLocation);
     showData.classList.remove("active");
     grantLocation.classList.remove("active");
   try{
-
-    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=city&appid=3d1b83a8ae5b7326f321b71dd18f646c'); 
+    const APIkey = '3d1b83a8ae5b7326f321b71dd18f646c';
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIkey}`); 
       
    const data= await response.json();
    loading.classList.remove("active");
