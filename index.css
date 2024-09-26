@@ -11,7 +11,7 @@
     overflow-y: hidden;
     overflow-x: hidden;
 }
-@media (max-width:640px) {
+@media (max-width:500px) {
     .container{
         overflow-y: hidden;
         overflow-x: hidden;
@@ -19,8 +19,23 @@
     .yourWeather{
         scale: 0.6;  
     }
-
-   
+.searchCity{
+    scale: 2;
+    
+}
+.fetchTemp{
+    margin-left: -5%;
+}
+.tem{
+    margin-left: -42px;
+}
+.city{
+    margin-left: -3%;
+}
+ 
+.clouds{
+    margin-left: 24%;
+}
     .grantLocation{
      margin-left: 40%;
        
@@ -30,28 +45,16 @@
        
     }
     .searchWeather{
-        scale: 0.6; 
+        scale: 0.6;
+        margin-left: 30%; 
     } 
-
-
-   .showData{
-    scale: 0.5;
-    margin-left: -454px;
-   }
-   /* .flex{
-    margin-left: -10px;
-   } */
-
    .flex2{
     margin-left: -50px;
    }
    .grantLocation{
    left: -70px;
    }
-   
-  
 }
-
 .background-clip{
     z-index: -1;
     position: absolute;
@@ -74,38 +77,48 @@
     display: flex;
     justify-content: space-around;
 
+   
 }
 .yourWeather{
-   color:white;
-    height: 12px;
-    width: 272px;
+  
+    color: rgb(166, 226, 14);
+    /* height: 12vh;
+    width: 32vw; */ height: auto;
+ width: auto;
     padding: 1rem;
     border-radius: 0.5rem;
     font-size: x-large;
     cursor: pointer;
 }
 .yourWeather.Tab{
+  color: white; 
  background-color: rgb(126, 159, 178);
  box-shadow: 3px 3px lightblue;
- height: 55px;
- width: 173px;
+ /* height: 55px;
+ width: 13vw; */
+ height: auto;
+ width: auto;
 }
 .searchWeather{
+ 
     font-size: x-large;
-    height: 12px;
-    width: 272px;
+
     padding: 1rem;
     margin-left: 15vw;
     border-radius: 0.5rem;
     cursor: pointer;
-    color: white;
-    
+    color: rgb(166, 226, 14);
+    height: auto;
+    width: auto; ;
 }
 .searchWeather.Tab{
+    color: white;
     background-color: rgb(126, 159, 178);
     box-shadow: 3px 3px lightblue;
-     height: 55px;
-     width: 193px;
+     /* height: 55px;
+     width: 15vw; */
+   height: auto;
+   width: auto;
 }
 .grantLocation{
     display: grid;
@@ -147,56 +160,84 @@
 }
 .showData{
     height: 64vh;
-    width: 62vw;
+    /* width: 62vw; */
+    width: auto;
     margin-left: 27vw;
-    margin-top: -44vh;
+    margin-top: -38vh;
  
     border-radius: 1rem;
     scale: 0;
    
+}
+.fetchTemp{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    color:rgb(235, 11, 11);
+    /* margin-left: 3%; */
+}
+.city{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: italic;
+    color:rgb(235, 13, 13);
+}
+.windData{
+    margin-left: -3%;
 }
 .showData.active{
    scale: 1;
 }
 
 .tempFig{
-    height: 12vh;
+    /* height: 12vh; */
     width: 6vw;
    
     
 }
 .humidityFig{
-    height: 12vh;
+    /* height: 12vh; */
     width: 6vw;
   
     
 }
 .cloudsFig{
-    height: 12vh;
+    /* height: 12vh; */
     width: 6vw;
   
     
 }
 .windFig{
-    height: 12vh;
+    /* height: 12vh; */
     width: 6vw;
 }
  
 .humidity{
-    height: 12vh;
-    width: 6vw;
-    margin-left: 3rem;
-   
+    /* margin-left: 3rem; */
+    background-color: rgb(194, 202, 202);
+    border-radius: 5px;
+    box-shadow: 1px 1px lightcyan;
+    padding: 1%;
 }
 .clouds{
-    height: 12vh;
-    width: 6vw;
-    margin-left: 5rem;
+    /* height: 120px;
+    width: 60px; */
+    /* margin-left: 5rem; */
+    background-color: rgb(194, 202, 202);
+    border-radius: 5px;
+    box-shadow: 1px 1px lightcyan;
+    padding: 2%;
+
  
 }
-.SpeedWind{
-    height: 12vh;
-    width: 6vw;
+.speedWind{
+    /* margin-left: 1rem; */
+    background-color: rgb(194, 202, 202);
+    border-radius: 5px;
+    box-shadow: 1px 1px lightcyan;
+    padding: 1%;
    
 }
  .loading
@@ -213,7 +254,7 @@
 /* HTML: <div class="loader"></div> */
 .loader { 
      margin-top: -65vh;
-    margin-left: 44vw;
+    margin-left: 40vw;
   width: 80px;
   aspect-ratio: 1;
   display: grid;
@@ -252,18 +293,22 @@
    padding: 6px; 
 }
 .search{
+    position: relative;
     margin-left: 35vw;
     scale: 0;
-    margin-top: -12vh;
+    margin-top: -5vh;
 }
 .search.active{
   scale: 1;
    
 }
 .hand{
+    position: absolute;
     width: 34px;
     height: 34px;
-    margin-left: -3rem;
-    margin-top: 4rem;
+    /* height: auto;
+    width: auto; */
+    margin-left: 0.6rem;
+    /* margin-top: 0.2rem; */
    
 }
