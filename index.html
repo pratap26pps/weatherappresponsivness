@@ -8,10 +8,12 @@
 </head>
 <body>
     
-
+   <canvas id="canvas"></canvas>
+ <button id="fullscreenBtn"></button>
     <div class="container">
-   <video autoplay loop muted plays-inline class="background-clip" src="weather.mp4"
-   >  </video>
+   <!-- <video autoplay loop muted plays-inline class="background-clip" src="weather.mp4"
+   >  </video> -->
+     
 
         <div class="app">WEATHER APP</div>
      <div class="flex">
@@ -21,8 +23,8 @@
       
      <div class="grantLocation active">
         <img class="fig" src="your-location.png" >
-        <h2>GRANT LOCATION ACCESS</h2>
-        <h5>allow acces to weather information</h5>
+        <h2 class="grant">GRANT LOCATION ACCESS</h2>
+        <h5 class="grant">allow acces to weather information</h5>
         <div class="accessButton">grant access</div>
      </div>
 
@@ -38,7 +40,7 @@
       <img class="tempFig" src="high-temperature.png" alt="">
       
       <span class="fetchTemp"></span>
-      <h3 class="tem">TEMPERATURE</h3>
+      <h3 class="tem grant">TEMPERATURE</h3>
     </div>
         
 <div class="flex2">
@@ -76,7 +78,7 @@
     </form>
 
     </div>
-  
+ 
 
 
     <script src="index.js"></script>
